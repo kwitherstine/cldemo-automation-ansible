@@ -10,9 +10,8 @@ Quickstart: Run the demo
 (This assumes you are running Ansible 1.9.4 and Vagrant 1.8.4 on your host.)
 
     git clone https://github.com/cumulusnetworks/cldemo-vagrant
-    git checkout full-reference-topology
     cd cldemo-vagrant
-    vagrant up oob-mgmt-server oob-mgmt-switch leaf01 leaf02 leaf 03 leaf04 spine01 spine02 server01 server02 server03 server04
+    vagrant up oob-mgmt-server oob-mgmt-switch leaf01 leaf02 leaf03 leaf04 spine01 spine02 server01 server02 server03 server04
     vagrant ssh oob-mgmt-server
     sudo su - cumulus
     sudo apt-get install software-properties-common -y
@@ -21,6 +20,7 @@ Quickstart: Run the demo
     sudo apt-get install ansible -qy
     git clone https://github.com/cumulusnetworks/cldemo-automation-ansible
     cd cldemo-automation-ansible
+    git checkout full-reference-topology
     ansible-playbook run-demo.yml
     ssh server01
     wget 172.16.2.101
